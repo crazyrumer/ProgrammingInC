@@ -2,3 +2,4 @@
 
 // function definition
 void HelloWorld(void);
+void PrintString(char string[]);

@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include "9_4.h"
-
+#include "Chapter9\9_6.h"
 
 
 int main(void)
 {
-	p9_5();
+	p9_6();
 	getchar();
 	return 0;
 }
