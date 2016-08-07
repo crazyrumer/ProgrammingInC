@@ -12,3 +12,5 @@
 *.tlog
 *.exe
 *.ilk
+*.db
+Main/Main.VC.VC.opendb
