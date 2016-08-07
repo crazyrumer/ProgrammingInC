@@ -1,17 +1,32 @@
 //-----------------------------------------------------------------------------
-// Programm 9.7 - Counting Words
+// Programm 9.8 - Counting Words in a Piece of Text
 //-----------------------------------------------------------------------------
-#include "9_7.h"
+#include "9_8.h"
 
-int p9_7(void)
+int p9_8(void)
 {
-	const char text1[] = "Well, here goes.";
-	const char text2[] = "And here we go...again.";
+	char buffer[128];
 
-	printf("%s - words = %i\n", text1, countWords(text1));
-	printf("%s - words = %i\n", text2, countWords(text2));
+	PrintString("Enter the string:\n");
+	readLine(buffer);
+
+	printf("count = %i", countWords(buffer));
 
 	return 0;
+}
+
+void readLine(char buffer[])
+{
+	char c;
+	int i = 0;
+	do
+	{
+		c = getchar();
+		buffer[i] = c;
+		i++;
+	} while (c != '\n');
+
+	buffer[i - 1] = '\0';
 }
 
 // Function to determine if a character is alphabetic
@@ -29,17 +44,15 @@ bool alphabetic(const char c)
 // Function to count number of words in the string
 int countWords(const char string[])
 {
-	int		i				= 0;
-	int		wordCount		= 0;
-	bool	lookingForWord	= true;
-	char	c;
+	int		i = 0;
+	int		wordCount = 0;
+	bool	lookingForWord = true;
 
 	do
 	{
-		c = string[i];
 		if (lookingForWord)
 		{
-			if (alphabetic(c))
+			if (alphabetic(string[i]))
 			{
 				lookingForWord = false;
 				wordCount++;
@@ -47,7 +60,7 @@ int countWords(const char string[])
 		}
 		else
 		{
-			if (!alphabetic(c))
+			if (!alphabetic(string[i]))
 			{
 				lookingForWord = true;
 			}
@@ -55,8 +68,8 @@ int countWords(const char string[])
 
 		i++;
 
-	} while (c != '\0');
-	
+	} while (string[i] != '\0');
+
 
 
 	return wordCount;
