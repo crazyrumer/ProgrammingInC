@@ -7,8 +7,8 @@
 //
 // where source is the character string from which you are extracting the substring, 
 // start is an index number into source indicating the first character of the substring,
-// count is the number of characters to be extracted from the source string, and result 
-// is an array of characters that is to contain the extracted substring.For example, the call 
+// count is the number of characters to be extracted from the source string, and 
+// result is an array of characters that is to contain the extracted substring.For example, the call 
 // 
 // substring("character", 4, 3, result);
 //
@@ -28,24 +28,10 @@
 
 int p9_ex4(void)
 {
-	char buffer_one[128];
-	char buffer_two[128];
-
-	PrintString("Enter the first string:\n");
-	readLine(buffer_one);
-
-	PrintString("Enter the second string:\n");
-	readLine(buffer_two);
-	
-	if (compareStrings(buffer_one, buffer_two) == 0)
-	{
-		PrintString("Strings are equal");
-	}
-	else
-	{
-		PrintString("Strings are not equal");
-	}
-
+	char result[16];
+	char source[] = "hello";
+	substring(" two words", 4, 20, result);
+	PrintString(result);
 	return 0;
 }
 
@@ -78,4 +64,16 @@ int compareStrings(char s1[], char s2[])
 			return (s1[i] > s2[i]) ? 1 : -1;
 		}
 	}
+}
+
+void substring(char source[], int start, int count, char result[])
+{
+	int i = 0;
+	while (i < count && source[start + i] != '\0')
+	{
+		result[i] = source[start + i];
+		i++;
+	}
+
+	result[i] = '\0';
 }
