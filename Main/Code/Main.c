@@ -4,7 +4,7 @@
 
 int main(void)
 {
-	p9_ex7();
+	p9_ex8();
 	getchar();
 	return 0;
 }
