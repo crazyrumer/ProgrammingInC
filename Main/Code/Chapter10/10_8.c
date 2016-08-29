@@ -13,7 +13,6 @@ int p10_8(void)
 
 	printf("After the call to test %i\n", i);
 
-
 	return 0;
 }
 
