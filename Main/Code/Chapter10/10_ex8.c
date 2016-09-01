@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// Chapter 10 - Exercise 7
+// Chapter 10 - Exercise 8
 // Write a function called sort3() to sort three integers into ascending order. 
 // (This function is not to be implemented with arrays.)
 //-----------------------------------------------------------------------------
