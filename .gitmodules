@@ -1,0 +1,3 @@
+[submodule "timabin"]
+	path = timabin
+	url = https://github.com/crazyrumer/timabin
