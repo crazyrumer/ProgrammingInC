@@ -1,1 +1,0 @@
-subst p: C:\Projects\C\ProgrammingInC

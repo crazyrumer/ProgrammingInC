@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "../timabin/code/timabin.h" // this is just test library not required for exercises
 
 // function definition
 void HelloWorld(void);
